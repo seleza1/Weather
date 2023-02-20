@@ -9,10 +9,9 @@ import Foundation
 
 struct NetworkController {
     private static var url = "https://api.openweathermap.org"
-    private static var path = "/data/2.5/weather"
 
     enum Endpoint {
-        case cityId(path: String, id: Int)
+        case cityId(path: String = "/data/2.5/weather", id: Int)
 
         var urlL: URL? {
             var components = URLComponents()
@@ -22,6 +21,13 @@ struct NetworkController {
             components.queryItems = queryParameters
 
             return components.url
+        }
+
+        private var path: String {
+            switch self {
+            case .cityId(let path, _):
+                return path
+            }
         }
 
         private var queryParameters: [URLQueryItem] {
