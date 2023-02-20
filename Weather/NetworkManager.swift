@@ -8,17 +8,28 @@
 import Foundation
 
 struct NetworkController {
-    private static var url = "https://api.openweathermap.org/data/2.5/weather"
+    private static var url = "https://api.openweathermap.org"
+    private static var path = "/data/2.5/weather"
 
     enum Endpoint {
-        case cityId(Int)
+        case cityId(path: String, id: Int)
 
-        var queryParameters: [URLQueryItem] {
+        var urlL: URL? {
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = url
+            components.path = path
+            components.queryItems = queryParameters
+
+            return components.url
+        }
+
+        private var queryParameters: [URLQueryItem] {
 
             var queryParameters = [URLQueryItem]()
 
             switch self {
-            case .cityId(let id):
+            case .cityId(_, let id):
                 queryParameters.append(URLQueryItem(name: "id", value: String(id)))
             }
             queryParameters.append(URLQueryItem(name: "appid", value: "1234"))
