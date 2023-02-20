@@ -8,15 +8,16 @@
 import Foundation
 
 struct NetworkController {
-    private static var url = "https://api.openweathermap.org"
+    private static var baseUrl = "https://api.openweathermap.org"
+    private static var apiKey = "369e313851897f00cc3919355793d21a"
 
     enum Endpoint {
         case cityId(path: String = "/data/2.5/weather", id: Int)
 
-        var urlL: URL? {
+        var url: URL? {
             var components = URLComponents()
             components.scheme = "https"
-            components.host = url
+            components.host = baseUrl
             components.path = path
             components.queryItems = queryParameters
 
@@ -38,8 +39,16 @@ struct NetworkController {
             case .cityId(_, let id):
                 queryParameters.append(URLQueryItem(name: "id", value: String(id)))
             }
-            queryParameters.append(URLQueryItem(name: "appid", value: "1234"))
+            queryParameters.append(URLQueryItem(name: "appid", value: apiKey))
             return queryParameters
         }
+    }
+
+    static func fetchWeather() {
+        //Endpoint.cityId(id: 123).url
+
+//        if let url = Endpoint.cityId(id: 5128581) {
+//            
+//        }
     }
 }
