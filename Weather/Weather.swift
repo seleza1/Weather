@@ -22,7 +22,9 @@ struct Weather: Decodable {
             case feelsLike = "feelsLike"
             case tempMin = "temp_min"
             case tempMax = "temp_max"
-            case temp, pressure, humidity
+            case temp
+            case pressure
+            case humidity
         }
 
     }
