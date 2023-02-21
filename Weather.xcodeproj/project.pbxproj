@@ -64,19 +64,75 @@
 		CEC517F029A4048200A442FA /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				CEC517F129A4048200A442FA /* AppDelegate.swift */,
-				CEC517F329A4048200A442FA /* SceneDelegate.swift */,
-				CEC517F529A4048200A442FA /* HomeViewController.swift */,
-				CEC517F729A4048200A442FA /* Main.storyboard */,
-				CEC517FA29A4048500A442FA /* Assets.xcassets */,
-				CEC517FC29A4048500A442FA /* LaunchScreen.storyboard */,
-				CEC517FF29A4048500A442FA /* Info.plist */,
-				CEC5180529A40BF200A442FA /* NetworkManager.swift */,
-				CEC5180729A40C7800A442FA /* Weather.swift */,
-				CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */,
-				CEC5180B29A4AEFA00A442FA /* HomeViewModel.swift */,
+				CEC5180D29A4B49100A442FA /* Applications */,
+				CEC5181229A4B54D00A442FA /* Models */,
+				CEC5181329A4B55900A442FA /* ViewControllers */,
+				CEC5181129A4B53E00A442FA /* NetworkManager */,
+				CEC5181029A4B53100A442FA /* Extension */,
+				CEC5180E29A4B49F00A442FA /* Resources */,
+				CEC5180F29A4B52400A442FA /* Storyboards */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		CEC5180D29A4B49100A442FA /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				CEC517F129A4048200A442FA /* AppDelegate.swift */,
+				CEC517F329A4048200A442FA /* SceneDelegate.swift */,
+				CEC517FF29A4048500A442FA /* Info.plist */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		CEC5180E29A4B49F00A442FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEC517FA29A4048500A442FA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEC5180F29A4B52400A442FA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CEC517F729A4048200A442FA /* Main.storyboard */,
+				CEC517FC29A4048500A442FA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CEC5181029A4B53100A442FA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CEC5181129A4B53E00A442FA /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5180529A40BF200A442FA /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CEC5181229A4B54D00A442FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5180729A40C7800A442FA /* Weather.swift */,
+				CEC5180B29A4AEFA00A442FA /* HomeViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEC5181329A4B55900A442FA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEC517F529A4048200A442FA /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L86P4HUDQ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = Weather/Applications/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +392,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L86P4HUDQ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = Weather/Applications/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
