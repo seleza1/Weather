@@ -44,11 +44,18 @@ struct NetworkController {
         }
     }
 
-    static func fetchWeather() {
-        //Endpoint.cityId(id: 123).url
+    static func fetchWeather(for cityId: Int = 5128581, _ completion: @escaping ((Weather) -> Void)) {
+        if let url = Endpoint.cityId(id: cityId).url {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("error", error)
+                }
+                if let data = data {
+                    guard let weather = try? JSONDecoder().decode(Weather.self, from: data) else { return }
+                    completion(weather)
 
-//        if let url = Endpoint.cityId(id: 5128581) {
-//            
-//        }
+                }
+            }
+        }
     }
 }
