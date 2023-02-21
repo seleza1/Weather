@@ -16,6 +16,7 @@
 		CEC5180629A40BF200A442FA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5180529A40BF200A442FA /* NetworkManager.swift */; };
 		CEC5180829A40C7800A442FA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5180729A40C7800A442FA /* Weather.swift */; };
 		CEC5180A29A4AE7C00A442FA /* Double+TemperatureConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */; };
+		CEC5180C29A4AEFA00A442FA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5180B29A4AEFA00A442FA /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CEC5180529A40BF200A442FA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CEC5180729A40C7800A442FA /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+TemperatureConversion.swift"; sourceTree = "<group>"; };
+		CEC5180B29A4AEFA00A442FA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				CEC5180529A40BF200A442FA /* NetworkManager.swift */,
 				CEC5180729A40C7800A442FA /* Weather.swift */,
 				CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */,
+				CEC5180B29A4AEFA00A442FA /* HomeViewModel.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				CEC5180629A40BF200A442FA /* NetworkManager.swift in Sources */,
 				CEC5180A29A4AE7C00A442FA /* Double+TemperatureConversion.swift in Sources */,
+				CEC5180C29A4AEFA00A442FA /* HomeViewModel.swift in Sources */,
 				CEC517F629A4048200A442FA /* HomeViewController.swift in Sources */,
 				CEC517F229A4048200A442FA /* AppDelegate.swift in Sources */,
 				CEC517F429A4048200A442FA /* SceneDelegate.swift in Sources */,
