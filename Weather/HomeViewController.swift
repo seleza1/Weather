@@ -9,11 +9,20 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var temperatureLabel: UILabel!
+    
+    private let viewModel = HomeViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUi()
         
         NetworkController.fetchWeather { weather in
             print(weather)
         }
+    }
+
+    private func setupUi() {
+        temperatureLabel.text = viewModel.temperatureString
     }
 }
