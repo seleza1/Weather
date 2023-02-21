@@ -11,8 +11,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkController.fetchWeather { <#Weather#> in
-            <#code#>
+        NetworkController.fetchWeather { weather in
+            print(weather)
         }
     }
 

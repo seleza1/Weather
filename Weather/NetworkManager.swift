@@ -55,7 +55,7 @@ struct NetworkController {
                     completion(weather)
 
                 }
-            }
+            }.resume()
         }
     }
 }
