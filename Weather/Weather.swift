@@ -8,7 +8,7 @@
 import Foundation
 
 struct Weather: Decodable {
-    var main: [Main]
+    var main: Main
 
     struct Main: Decodable {
         var temp: Double
@@ -19,7 +19,7 @@ struct Weather: Decodable {
         var humidity: Double
 
         enum CodingKeys: String, CodingKey {
-            case feelsLike = "feelsLike"
+            case feelsLike = "feels_like"
             case tempMin = "temp_min"
             case tempMax = "temp_max"
             case temp
