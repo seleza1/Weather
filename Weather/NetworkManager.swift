@@ -8,7 +8,8 @@
 import Foundation
 
 struct NetworkController {
-    private static var baseUrl = "https://api.openweathermap.org"
+
+    private static var baseUrl = "api.openweathermap.org"
     private static var apiKey = "369e313851897f00cc3919355793d21a"
 
     enum Endpoint {
@@ -16,10 +17,11 @@ struct NetworkController {
 
         var url: URL? {
             var components = URLComponents()
+
             components.scheme = "https"
             components.host = baseUrl
             components.path = path
-            components.queryItems = queryParameters
+            components.queryItems = queryItems
 
             return components.url
         }
@@ -31,34 +33,47 @@ struct NetworkController {
             }
         }
 
-        private var queryParameters: [URLQueryItem] {
+        private var queryItems: [URLQueryItem] {
 
-            var queryParameters = [URLQueryItem]()
+            var queryItems = [URLQueryItem]()
 
             switch self {
             case .cityId(_, let id):
-                queryParameters.append(URLQueryItem(name: "id", value: String(id)))
+                queryItems.append(URLQueryItem(name: "id", value: String(id)))
             }
-            queryParameters.append(URLQueryItem(name: "appid", value: apiKey))
-            return queryParameters
+
+            queryItems.append(URLQueryItem(name: "appid", value: apiKey))
+
+            return queryItems
         }
     }
 
-    static func fetchWeather(for cityId: Int = 5128581, _ completion: @escaping ((Weather) -> Void)) {
+    // 5128581 is New York
+    static func fetchWeather(for cityId: Int = 5128581 , _ completion: @escaping ((Weather) -> Void)) {
         if let url = Endpoint.cityId(id: cityId).url {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
-                    print("error", error)
+                    print("Whoops, and error occured!", error)
                 }
-                print("AAAAAAA",Endpoint.cityId(id: cityId).url)
+                print(Endpoint.cityId(id: cityId).url)
 
                 if let data = data {
-                    guard let weather = try? JSONDecoder().decode(Weather.self, from: data) else { return }
-                    
-                    completion(weather)
+                    do {
+                        let weather = try JSONDecoder().decode(Weather.self, from: data)
+
+                        completion(weather)
+                    } catch let error {
+                        print("failed to decode object...", error)
+                    }
 
                 }
             }.resume()
         }
     }
+
+//    static func fetchMailMessages(_ completion: @escaping (([Mail.Messsage]) -> Void)) {
+//
+//    }
+
 }
+

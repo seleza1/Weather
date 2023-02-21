@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         NetworkController.fetchWeather { weather in
             print(weather)
         }
-    }
 
 
 }
 
+}
