@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		CEC517F229A4048200A442FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC517F129A4048200A442FA /* AppDelegate.swift */; };
 		CEC517F429A4048200A442FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC517F329A4048200A442FA /* SceneDelegate.swift */; };
-		CEC517F629A4048200A442FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC517F529A4048200A442FA /* ViewController.swift */; };
+		CEC517F629A4048200A442FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC517F529A4048200A442FA /* HomeViewController.swift */; };
 		CEC517F929A4048200A442FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC517F729A4048200A442FA /* Main.storyboard */; };
 		CEC517FB29A4048500A442FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC517FA29A4048500A442FA /* Assets.xcassets */; };
 		CEC517FE29A4048500A442FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC517FC29A4048500A442FA /* LaunchScreen.storyboard */; };
 		CEC5180629A40BF200A442FA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5180529A40BF200A442FA /* NetworkManager.swift */; };
 		CEC5180829A40C7800A442FA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5180729A40C7800A442FA /* Weather.swift */; };
+		CEC5180A29A4AE7C00A442FA /* Double+TemperatureConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEC517EE29A4048200A442FA /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC517F129A4048200A442FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC517F329A4048200A442FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEC517F529A4048200A442FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEC517F529A4048200A442FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEC517F829A4048200A442FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEC517FA29A4048500A442FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC517FD29A4048500A442FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC517FF29A4048500A442FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC5180529A40BF200A442FA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CEC5180729A40C7800A442FA /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+TemperatureConversion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +64,14 @@
 			children = (
 				CEC517F129A4048200A442FA /* AppDelegate.swift */,
 				CEC517F329A4048200A442FA /* SceneDelegate.swift */,
-				CEC517F529A4048200A442FA /* ViewController.swift */,
+				CEC517F529A4048200A442FA /* HomeViewController.swift */,
 				CEC517F729A4048200A442FA /* Main.storyboard */,
 				CEC517FA29A4048500A442FA /* Assets.xcassets */,
 				CEC517FC29A4048500A442FA /* LaunchScreen.storyboard */,
 				CEC517FF29A4048500A442FA /* Info.plist */,
 				CEC5180529A40BF200A442FA /* NetworkManager.swift */,
 				CEC5180729A40C7800A442FA /* Weather.swift */,
+				CEC5180929A4AE7C00A442FA /* Double+TemperatureConversion.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -145,7 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC5180629A40BF200A442FA /* NetworkManager.swift in Sources */,
-				CEC517F629A4048200A442FA /* ViewController.swift in Sources */,
+				CEC5180A29A4AE7C00A442FA /* Double+TemperatureConversion.swift in Sources */,
+				CEC517F629A4048200A442FA /* HomeViewController.swift in Sources */,
 				CEC517F229A4048200A442FA /* AppDelegate.swift in Sources */,
 				CEC517F429A4048200A442FA /* SceneDelegate.swift in Sources */,
 				CEC5180829A40C7800A442FA /* Weather.swift in Sources */,
