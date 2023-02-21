@@ -50,8 +50,11 @@ struct NetworkController {
                 if let error = error {
                     print("error", error)
                 }
+                print("AAAAAAA",Endpoint.cityId(id: cityId).url)
+
                 if let data = data {
                     guard let weather = try? JSONDecoder().decode(Weather.self, from: data) else { return }
+                    
                     completion(weather)
 
                 }
